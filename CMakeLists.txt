@@ -1,6 +1,7 @@
 # Specify the C++ and CUDA compilers.
 set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 set(CMAKE_CUDA_ARCHITECTURES "native")
+
 IF(EXISTS "/usr/local/cuda/bin/nvcc")
     set(CMAKE_CUDA_COMPILER "/usr/local/cuda/bin/nvcc")
 else()
