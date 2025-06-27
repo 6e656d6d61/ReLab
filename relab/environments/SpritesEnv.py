@@ -60,9 +60,20 @@ class SpritesEnv(Env):
     """!
     @brief A class implementing the dSprites environment.
 
-    @details Adapted from:
-    https://github.com/zfountas/deep-active-inference-mc/blob/master/src/game_environment.py
-    TODO cite paper
+    @details
+    This environment was introduced in:
+
+    <b>Deep active inference agents using Monte-Carlo methods</b>,
+    published in NeuIPS, 2020.
+
+    Authors:
+    - Zafeirios Fountas
+    - Noor Sajid
+    - Pedro Mediano
+    - Karl Friston
+
+    The paper introduced a deep active inference agent trained on the dSprites
+    and AnimalAI environments.
     """
 
     # @var metadata
@@ -72,7 +83,7 @@ class SpritesEnv(Env):
     metadata = {"render_modes": ["rgb_array"], "render_fps": 30}
 
     def __init__(
-        self, max_episode_length: int = 1000, difficulty: str = "hard", **kwargs: Any
+        self, max_episode_length: int = 100, difficulty: str = "hard", **kwargs: Any
     ) -> None:
         """!
         Constructor (compatible with OpenAI gym environment)
